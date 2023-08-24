@@ -1,0 +1,28 @@
+ <!-- <swiper indicator-dots circular autoplay="true">
+<swiper-item  wx:for="{{swiperList}}" wx:key="id">
+<image src="{{item}}"></image>
+</swiper-item>
+</swiper>
+<view class="loadType">
+		<button type="primary" bindtap="loginByParent" open-type="getUserInfo" class="but11">我是家长</button>
+		 <button type="primary"  open-type="getUserInfo" bindgetuserinfo="getUserInfo">看看信息</button> 
+		<button type="primary" bindtap="loginByTeacher">我是班主任</button>
+</view>  -->
+
+
+
+<view class="container">
+  <swiper class="swiper-container" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{swiperList}}" wx:key="id">
+      <swiper-item>
+        <image class="swiper-image" src="{{item}}" mode="aspectFill"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="logo-image"></view>
+  <view class="slogan-text">打造高效班级管理工具</view>
+  <view class="button-group">
+    <view class="login-button" bindtap="loginByTeacher">班主任登录</view>
+    <view class="login-button" bindtap="loginByParent" open>家长登录</view>
+  </view>
+</view>

@@ -1,0 +1,102 @@
+/* .loadType{
+	margin-top: 200rpx;
+	position: relative;
+}
+button{
+	margin-top: 50rpx;
+}
+swiper{
+  height: 350rpx;
+
+}
+
+swiper image{
+  width: 100%;
+  height: 100%;
+}
+.but11 {
+  width: 200rpx;
+  height: 80rpx;
+  line-height: 50rpx;
+  text-align: center;
+  background-color: #04BE02;
+  color: #fff;
+  border-radius: 10rpx;
+  position: relative;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+} */
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 60%;
+  margin-bottom: 100rpx;
+}
+
+.swiper-image {
+  width: 100%;
+  height: 60%;
+}
+
+.logo-image {
+  width: 100rpx;
+  height: 100rpx;
+  background-image: url('https://636c-cloud1-5gcyh64u438114c5-1317335926.tcb.qcloud.la/%E5%AD%A6%E6%A0%A1_%E7%8F%AD%E7%BA%A7.png?sign=780536a8972d9b75bf2914191afa78f7&t=1681216223');
+  background-size: cover;
+  margin-top:-100rpx;
+}
+
+.slogan-text {
+  font-size: 24rpx;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+
+.login-button {
+  width: 200rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background-color: #1f7de7;
+  color: #fff;
+  border-radius: 10rpx;
+  position: relative;
+  animation: pulse 2s ease-in-out infinite;
+  
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}

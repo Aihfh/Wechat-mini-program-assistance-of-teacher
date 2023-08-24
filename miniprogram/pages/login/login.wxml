@@ -1,0 +1,5 @@
+<view class="loadType">
+		<button type="primary" bindtap="loadByWechat">微信授权登录</button>
+		<button type="primary" bindtap="loginByParent">我是家长</button>
+		<button type="primary" bindtap="loginByTeacher">我是班主任</button>
+</view>

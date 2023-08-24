@@ -1,0 +1,10 @@
+<!-- unread-list.wxml -->
+<view class="container">
+  <view class="title">未确认名单</view>
+  <view class="list">
+    <view wx:for="{{unreadList}}" wx:key="{{item.id}}" class="item">
+      <text class="name">{{item.Pname}}</text>
+    </view>
+  </view>
+</view>
+ <button type="primary" bindtap="backlast">返回上一层</button>

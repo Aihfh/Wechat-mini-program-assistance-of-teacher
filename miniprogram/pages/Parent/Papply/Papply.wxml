@@ -1,0 +1,44 @@
+<!-- 表单 -->
+<view class='baseInfo'>
+  <text>基本信息</text>
+</view>
+<form bindsubmit="formSubmit">
+<view class='list'>
+  <view class='name'>
+    <text>姓名</text>
+    {{nickName}}
+  </view>
+    <view class='list-msg'>
+			<text>请选择请假类型</text>
+<!--下拉框  -->
+   		 <view class='list-msg2' bindtap='bindShowMsg'>
+        <text>{{class1}}</text>
+   		 </view>
+
+<!-- 下拉需要显示的列表 -->
+     	<view class="select_box" wx:if="{{select}}"> 
+        <view class="select_one" bindtap="mySelect" data-cclass1="事假">事假</view>
+        <view class="select_one" bindtap="mySelect" data-cclass1="病假">病假</view>
+        <view class="select_one" bindtap="mySelect" data-cclass1="其他">其他</view>
+     	 </view> 
+    </view>
+    <view class="name">
+    </view>
+  <!-- <view class='name'>
+		<text>请假理由</text>
+		<input name="reason" type='text' placeholder-style='font-size:28rpx;' placeholder='请输入请假理由'></input>
+  </view> -->
+      <view class="section">
+        <textarea name='content'  auto-height auto-focus placeholder="请输入请假理由" ></textarea>
+      </view>
+</view>
+<button form-type='submit'>提交</button>
+</form>
+<!-- 模态框 -->
+<modal class="modal" title='要提交的信息' hidden="{{modalHidden}}" bindcancel='modalCancel' bindconfirm='modalConfirm'>
+    <view>姓名:{{nickName}}</view>
+    <view>请假类型:{{class1}}</view>
+		<view>原因：{{Info}}</view>
+</modal>
+
+

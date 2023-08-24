@@ -1,0 +1,13 @@
+<!-- message-detail.wxml -->
+<view class="container">
+  <view class="title">{{message.title}}</view>
+  <view class="time">{{message.time}}</view>
+  <view class="content">
+    <rich-text nodes="{{message.content}}"></rich-text>
+    <view class="image-list">
+      <image  src="{{message.images}}"></image>
+    </view>
+  </view>
+  <!-- <view class="button" bindtap="onViewUnreadList">查看未读名单</view> -->
+  <view class="button" bindtap="onViewUnreadList">查看未读名单</view>
+</view>

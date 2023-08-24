@@ -1,0 +1,34 @@
+<!--pages/home/home.wxml-->
+<!--轮播图区域-->
+<swiper indicator-dots circular autoplay="true">
+<swiper-item  wx:for="{{swiperList}}" wx:key="id">
+<image src="{{item}}"></image>
+</swiper-item>
+</swiper>
+<!-- 九宫格区域-->
+<view class="grid-list">
+  <navigator class="grid-item" wx:for="{{gridList}}" wx:key="id" url="../../Teacher/TMesview/TMesview">
+    <image src="{{item.icon}}"></image>
+    <text>{{item.name}}</text>
+  </navigator>
+</view> 
+<!--图片区域-->
+<view class="img-box">
+	<image src="/images/tab/shenpi.png" mode="widthFix"></image>
+  <image src="/images/tab/ziliao.png" mode="widthFix"></image>
+</view>
+<view class="text-box">
+	<navigator url="../Tview/Tview">查看审批</navigator>
+	<navigator url="../TMes/TMes?ava={{ava}}">发布消息</navigator>
+	<!-- 源页面 -->
+	
+<!-- <navigator url="/pages/target/target?param1=value1&amp;param2=value2">跳转到目标页面</navigator> -->
+
+</view>
+<!-- <button type="primary" bindtap="gotoMessage">跳转到message</button>
+<button type="primary" bindtap="gotoInfo">跳转到Info</button> -->
+<!-- <view>
+<navigator url="/pages/info/info?name=zs&age=20">传参跳转info</navigator> 
+<button type="primary" bindtap="gotoInfo2">编程传参</button>
+</view> -->
+<!-- <view class="box"></view> -->

@@ -1,0 +1,38 @@
+<!-- 表单 -->
+<view class='baseInfo'>
+  <text>基本信息</text>
+</view>
+<form bindsubmit="formSubmit">
+<view class='list'>
+  <view class='icon'>
+    <text>头像</text>
+    <view class='icon-img'>  
+      <image class='icon-head' src='{{avatarUrl}}'></image>
+    </view>
+  </view>
+  <view class='name'>
+    <text>姓名</text>
+    <input name="name" type='text' placeholder-style='font-size:28rpx;' value="{{Pname}}" disabled="true"></input>
+  </view>
+ 
+  <view class='phone'>
+    <text>手机</text>
+    <input name="phone" type='text' placeholder-style='font-size:28rpx;' value="{{Pphone}}"></input>
+	</view>
+
+	<view class='phone'>
+    <text>班级</text>
+    <input name="class" type='text' placeholder-style='font-size:28rpx;' value="{{Pclass}}" disabled="true"></input>
+  </view>
+
+</view>
+<button form-type='submit'>提交</button>
+</form>
+<!-- 模态框 -->
+<modal class="modal" title='要提交的信息' hidden="{{modalHidden}}" bindcancel='modalCancel' bindconfirm='modalConfirm'>
+    <view>姓名:{{Pname}}</view>
+    <view>手机:{{Pphone}}</view>
+		<view>班级：{{Pclass}}</view>
+</modal>
+
+

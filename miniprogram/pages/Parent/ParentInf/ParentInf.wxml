@@ -1,0 +1,12 @@
+<!--已登录-->
+<view wx:if="{{loginOk}}">
+<view class="load" >
+<image src="{{avatarUrl}}" ></image>
+<text class="clickload" >{{nickName}}</text>
+</view>
+<button class="exit" bindtap="exit" type="primary">退出登录</button>
+</view>
+<view>
+	<view class="specialfont">信息更新</view>
+	<button type="default" bindtap="updatePinfo" >点击更新</button>
+</view>

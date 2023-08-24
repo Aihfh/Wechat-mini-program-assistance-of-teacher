@@ -1,0 +1,14 @@
+<!-- message-detail.wxml -->
+<view class="container">
+  <view class="title">{{message.title}}</view>
+  <view class="time">{{message.time}}</view>
+  <view class="content">
+    <rich-text nodes="{{message.content}}"></rich-text>
+    <view class="image-list">
+      <image wx:for="{{message.images}}" wx:key="{{item}}" src="{{item}}"></image>
+    </view>
+  </view>
+  <button type="primary" bindtap="onViewUnreadList1">同意</button>
+  
+  <button type="warn" class="button1" bindtap="onViewUnreadList2">拒绝</button>
+</view>

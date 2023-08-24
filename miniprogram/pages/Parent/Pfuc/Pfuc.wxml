@@ -1,0 +1,30 @@
+<!--pages/home/home.wxml-->
+<!--轮播图区域-->
+<swiper indicator-dots circular autoplay="true">
+<swiper-item  wx:for="{{swiperList}}" wx:key="id">
+<image src="{{item}}"></image>
+</swiper-item>
+</swiper>
+<!-- 九宫格区域-->
+<view class="grid-list">
+  <navigator class="grid-item" wx:for="{{gridList}}" wx:key="id" url="/pages/shoplist/shoplist?id={{item.id}}&title={{item.name}}">
+    <image src="{{item.icon}}"></image>
+    <text>{{item.name}}</text>
+  </navigator>
+</view> 
+<!--图片区域-->
+<view class="img-box">
+	<image src="/images/tab/shenpi.png" mode="widthFix"></image>
+  <image src="/images/tab/ziliao.png" mode="widthFix"></image>
+</view>
+<view class="text-box">
+  <text bindtap="BtAp">请求审批</text>
+  <text url="/pages/info/info" open-type="navigate">最新消息</text>
+</view>
+<!-- <button type="primary" bindtap="gotoMessage">跳转到message</button>
+<button type="primary" bindtap="gotoInfo">跳转到Info</button> -->
+<!-- <view>
+<navigator url="/pages/info/info?name=zs&age=20">传参跳转info</navigator> 
+<button type="primary" bindtap="gotoInfo2">编程传参</button>
+</view> -->
+<!-- <view class="box"></view> -->

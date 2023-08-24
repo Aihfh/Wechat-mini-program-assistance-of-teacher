@@ -1,0 +1,71 @@
+{
+  "pages": [
+		"pages/Login1/Login1",
+		"pages/login/login",
+		"pages/LoginInfo/LoginInfo",
+		"pages/register/register",
+		"pages/Teacher/TeacherLoginInf/TeacherLoginInf",
+		"pages/Teacher/TeacherInf/TeacherInf",
+		"pages/Teacher/TeaInvestigate/TeaInvestigate",
+		"pages/Teacher/TMes/TMes",
+		"pages/Teacher/TMesview/TMesview",
+		"pages/Teacher/Tmore/Tmore",
+		"pages/Teacher/Unreaded/Unreaded",
+		"pages/Teacher/Tfuc/Tfuc",
+		"pages/Teacher/Tview/Tview",
+		"pages/Parent/ParentInf/ParentInf",
+		"pages/Parent/Pfuc/Pfuc",
+		"pages/Parent/Pmore/Pmore",
+		"pages/Parent/Pmessage/Pmessage",
+		"pages/Parent/Papply/Papply",
+		"pages/Parent/PupInfo/PupInfo",
+		"pages/menu/menu"
+
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "班主任助手",
+    "navigationBarTextStyle": "black"
+	},
+	"tabBar": {
+		"custom": true,
+    "list": [
+      {
+        "pagePath": "pages/Parent/Pfuc/Pfuc",
+        "text": "首页",
+        "iconPath": "images/tab/menu.png",
+        "selectedIconPath": "images/tab/menua.png"
+			},
+      {
+        "pagePath": "pages/Parent/Pmessage/Pmessage",
+        "text": "消息",
+        "iconPath": "images/tab/message.png",
+        "selectedIconPath": "images/tab/messagea.png"
+      },
+			{
+        "pagePath": "pages/Parent/ParentInf/ParentInf",
+        "text": "我的",
+        "iconPath": "images/tab/my.png",
+        "selectedIconPath": "images/tab/mya.png"
+			},
+			{
+        "pagePath": "pages/Teacher/Tfuc/Tfuc",
+        "text": "教师首页",
+        "iconPath": "images/tab/my.png",
+        "selectedIconPath": "images/tab/mya.png"
+			},
+			{
+        "pagePath": "pages/Teacher/TeacherInf/TeacherInf",
+        "text": "教师信息",
+        "iconPath": "images/tab/my.png",
+        "selectedIconPath": "images/tab/mya.png"
+			}
+
+
+		]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

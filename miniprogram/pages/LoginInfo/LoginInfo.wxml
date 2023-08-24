@@ -1,0 +1,17 @@
+<!--未登录-->
+<view class="load" wx:if="{{!loginOk}}">
+<image src="../../images/我的.png" bindtap="load"></image>
+<text class="clickload" bindtap="load">点击登录</text>
+</view>
+<!--已登录-->
+<view wx:if="{{loginOk}}">
+<view class="load" >
+<image src="{{avatarUrl}}" ></image>
+<text class="clickload" >{{nickName}}</text>
+</view>
+<button class="exit" bindtap="exit" type="primary">退出登录</button>
+</view>
+<view>
+	<text>初次登录请先完善信息</text>
+	<button bindtap="updatePinfo" >点击更新</button>
+</view>

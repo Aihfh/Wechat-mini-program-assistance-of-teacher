@@ -1,0 +1,7 @@
+<view wx:for="{{datalist}}" class="raw" wx:key="index"> 
+    <view class="title" bindtap="clickTitle" data-id="{{item._id}}" data-idx="{{index}}">
+    {{index+1}}.{{item.Pname}}家长 ：{{item.Content}}
+    </view>
+    <view>已读:{{item.Readed}}</view>
+		<view>审批状态：{{item.state}}</view>
+</view>

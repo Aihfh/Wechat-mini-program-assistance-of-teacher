@@ -1,0 +1,21 @@
+<view class="container">
+  <form bindsubmit="submitForm">
+    <view class="input-box">
+      <text class="label">标题：</text>
+      <input type="text" name="title" placeholder="请输入标题" class="input" />
+    </view>
+    <view class="input-box">
+      <text class="label">内容：</text>
+      <textarea name="content" placeholder="请输入内容"  class="textarea"  ></textarea>
+      <text class="label">发布时间：</text>
+      <textarea value="{{time}}" class="textarea11" disabled="true" ></textarea>
+    </view>
+    <view class="input-box">
+      <text class="label">上传图片：</text>
+      <button class="btn-upload" bindtap="chooseImage">选择图片</button>
+      <text>图片预览：</text>
+      <image class="preview-image" mode="aspectFill" src="{{imageSrc}}" />
+    </view>
+    <button form-type="submit" class="btn-submit">确认发布</button>
+  </form>
+</view>

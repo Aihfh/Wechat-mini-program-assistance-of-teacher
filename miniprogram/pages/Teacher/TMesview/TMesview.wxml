@@ -1,0 +1,13 @@
+
+<view class="parent-notice">
+  <view class="notice-list">
+	
+    <!-- 使用 wx:for 循环渲染列表 -->
+    <view wx:for="{{ datalist }}" wx:key="{{ item.id }}" class="notice-item" bindtap="onViewNotice" data-id="{{item._id}}">
+      <view class="notice-title">{{ item.Title }}</view>
+      <view class="notice-time">{{ item.UpTime }}</view>
+			<view class="notice-title">阅读状态：{{item.Readed}}</view>
+    </view>
+  </view>
+</view>
+<button type="primary" bindtap="Upup1">更新</button>

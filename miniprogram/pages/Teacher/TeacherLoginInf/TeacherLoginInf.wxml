@@ -1,0 +1,52 @@
+<!--未登录-->
+<view class="load" wx:if="{{!loginOk}}">
+<image src="../../images/我的.png" bindtap="load"></image>
+<text class="clickload" bindtap="load">点击登录</text>
+</view>
+<!--已登录-->
+<view wx:if="{{loginOk}}">
+<view class="load" >
+<image src="{{avatarUrl}}" ></image>
+<text class="clickload" >{{nickName}}</text>
+</view>
+<button class="exit" bindtap="exit" type="primary">退出登录</button>
+</view>
+<form bindsubmit="formSubmit">
+
+		<view class='name'>
+       <text>姓名</text>
+       <input name="name" type='text' placeholder-style='font-size:28rpx;' placeholder='请输入你的姓名' maxlength="10"></input>
+		</view>
+		
+		<view class='phone'>
+       <text>手机</text>
+       <input name="phone" type="number" placeholder-style='font-size:28rpx;' placeholder='请输入你的手机号' maxlength="11"></input>
+  	</view>
+	
+
+    <view>
+	    <text>初次登录选择教学班级</text>
+	   
+    </view>
+  <view class='list-msg'>
+<!--下拉框  -->
+   		 <view class='list-msg2' bindtap='bindShowMsg'>
+        <text>{{class1}}</text>
+   		 </view>
+
+<!-- 下拉需要显示的列表 -->
+     	 <view class="select_box" wx:if="{{select}}"> 
+        <view class="select_one" bindtap="mySelect" data-cclass1="一班">一班</view>
+        <view class="select_one" bindtap="mySelect" data-cclass1="二班">二班</view>
+        <view class="select_one" bindtap="mySelect" data-cclass1="三班">三班</view>
+     	 </view> 
+	</view>
+	<button form-type="submit">点击上传</button>
+	<button form-type="reset">重置</button>
+</form>
+<!-- 模态框 -->
+<modal class="modal" title='要提交的信息' hidden="{{modalHidden}}" bindcancel='modalCancel' bindconfirm='modalConfirm'>
+    <view>姓名:{{Tname}}</view>
+    <view>手机:{{Tphone}}</view>
+		<view>班级：{{class1}}</view>
+</modal>
